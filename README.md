@@ -1,2 +1,0 @@
-# ClampCompany
-ClampCompany Code-base
