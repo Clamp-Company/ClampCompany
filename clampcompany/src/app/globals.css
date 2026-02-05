@@ -1,0 +1,109 @@
+/*//////////////////// CONFIG ////////////////////*/
+/*//                                            //*/
+/*/////////////////////////// ////////////////////*/
+
+:root {
+    font-family: FontLight;
+    --primary-color: #16DB65;
+    --secondary-color: #222425;
+    --supporting-color: #4DA3FF;
+    --background-color: #141414;
+    --pirmarytext-color: #ffffff;
+    --pirmarysecondary-color: #A8ADB2;
+    --rounded-normal-border-radius: 8px;
+    --rounded-button-border-radius: 6.25rem;
+    --primaryhover-color: #14C75C;
+    --secondaryhover-color: #2C2F2E;
+
+}
+
+@font-face {
+    font-family: FontLight;
+    src: url(/fonts/ppneuemontreal-book.otf);
+}
+
+@font-face {
+    font-family: FontMedium;
+    src: url(/fonts/ppneuemontreal-medium.otf);
+}
+
+@font-face {
+    font-family: FontBold;
+    src: url(/fonts/ppneuemontreal-bold.otf);
+}
+
+.FontLight {
+    font-family: FontLight;
+}
+
+.FontMedium {
+    font-family: FontMedium;
+}
+
+.FontBold {
+    font-family: FontLight;
+}
+
+body {
+    background: var(--background-color);
+}
+
+/*//////////////////// Button ////////////////////*/
+/*//                                            //*/
+/*/////////////////////////// ////////////////////*/
+
+.PrimaryButton {
+    display: inline-flex;
+    padding: 0.525rem 1.25rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    border-radius: 6.25rem;
+    background: var(--primary-color);
+    border: none;
+    cursor: pointer;
+    color: #141414;
+    font-family: "PP Neue Montreal";
+    font-size: clamp(1rem, 3vw, 1.075rem);
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.0275rem;
+    transition: all 75ms ease-in-out;
+}
+
+.PrimaryButton:hover {
+    background: var(--primaryhover-color);
+}
+
+.PrimaryButton:active {
+    scale: 98%;
+}
+
+.SecondaryButton {
+    display: inline-flex;
+    padding: 0.525rem 1.25rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    border-radius: 6.25rem;
+    background: var(--secondary-color);
+    border: none;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: "PP Neue Montreal";
+    font-size: clamp(1rem, 3vw, 1.075rem);
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.0275rem;
+    transition: all 75ms ease-in-out;
+}
+
+.SecondaryButton:hover {
+    background: var(--secondaryhover-color);
+}
+
+.SecondaryButton:active {
+    scale: 98%;
+}
