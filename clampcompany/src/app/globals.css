@@ -1,14 +1,17 @@
+@import "tailwindcss";
+
 /*//////////////////// CONFIG ////////////////////*/
 /*//                                            //*/
 /*/////////////////////////// ////////////////////*/
 
 :root {
-    font-family: FontLight;
+    font-family: FontMedium;
     --primary-color: #16DB65;
     --secondary-color: #222425;
     --supporting-color: #4DA3FF;
     --background-color: #141414;
     --pirmarytext-color: #ffffff;
+    --white-color: #ffffff;
     --pirmarysecondary-color: #A8ADB2;
     --rounded-normal-border-radius: 8px;
     --rounded-button-border-radius: 6.25rem;
@@ -34,14 +37,17 @@
 
 .FontLight {
     font-family: FontLight;
+    font-weight: 400;
 }
 
 .FontMedium {
     font-family: FontMedium;
+    font-weight: 400;
 }
 
 .FontBold {
-    font-family: FontLight;
+    font-family: FontBold;
+    font-weight: 700;
 }
 
 body {
@@ -63,10 +69,9 @@ body {
     border: none;
     cursor: pointer;
     color: #141414;
-    font-family: "PP Neue Montreal";
+    font-family: FontMedium;
     font-size: clamp(1rem, 3vw, 1.075rem);
     font-style: normal;
-    font-weight: 500;
     line-height: normal;
     letter-spacing: 0.0275rem;
     transition: all 75ms ease-in-out;
@@ -91,10 +96,9 @@ body {
     border: none;
     cursor: pointer;
     color: #ffffff;
-    font-family: "PP Neue Montreal";
+    font-family: FontMedium;
     font-size: clamp(1rem, 3vw, 1.075rem);
     font-style: normal;
-    font-weight: 500;
     line-height: normal;
     letter-spacing: 0.0275rem;
     transition: all 75ms ease-in-out;
@@ -106,4 +110,44 @@ body {
 
 .SecondaryButton:active {
     scale: 98%;
+}
+
+.LinkButton {
+    color: var(--primary-color);
+    text-align: center;
+    font-family: FontMedium;
+    font-size: 1.25rem;
+    font-style: normal;
+    line-height: 1.75rem;
+    letter-spacing: 0.005rem;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+}
+
+.LinkButton:hover {
+    background: var(--primaryhover-color-color);
+}
+
+.LinkButton:active {
+    scale: 95%;
+}
+
+.WhiteLinkButton {
+    color: var(--white-color);
+    text-align: center;
+    font-family: FontMedium;
+    font-weight: 400;
+    font-size: 1.15rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.75rem;
+    letter-spacing: 0.005rem;
+}
+
+.WhiteLinkButton:active {
+    scale: 95%;
 }

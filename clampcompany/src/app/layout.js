@@ -1,4 +1,5 @@
 import "./globals.css";
+import Navigation from "@/Components/global-components/nav";
 
 export const metadata = {
   title: "Clamp Company",
@@ -8,9 +9,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className=""
-      >
+      <body className="" style={{ padding: "clamp(1.5rem, 5vw, 3rem)" }}>
+        <Navigation />
         {children}
       </body>
     </html>
