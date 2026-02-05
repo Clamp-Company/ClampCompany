@@ -58,40 +58,64 @@ export default function Navigation() {
             </button>
           </div>
           <div className="sm:hidden block">
-            <button
-              className="PrimaryButton "
-              onClick={() => setMenuOpen(!menuOpen)}
-            >
-              Menu{" "}
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.25"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="lucide lucide-menu-icon lucide-menu"
+            {menuOpen ? (
+              <button
+                className="PrimaryButton "
+                onClick={() => setMenuOpen(!menuOpen)}
               >
-                <path d="M4 5h16" />
-                <path d="M4 12h16" />
-                <path d="M4 19h16" />
-              </svg>
-            </button>
+                Close{" "}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="lucide lucide-x-icon lucide-x"
+                >
+                  <path d="M18 6 6 18" />
+                  <path d="m6 6 12 12" />
+                </svg>
+              </button>
+            ) : (
+              <button
+                className="PrimaryButton "
+                onClick={() => setMenuOpen(!menuOpen)}
+              >
+                Menu{" "}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.25"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="lucide lucide-menu-icon lucide-menu"
+                >
+                  <path d="M4 5h16" />
+                  <path d="M4 12h16" />
+                  <path d="M4 19h16" />
+                </svg>
+              </button>
+            )}
           </div>
         </div>
       </nav>
 
       {menuOpen && (
-        <div className="flex flex-col gap-1.5 absolute bottom-5 left-0 right-0 w-full max-w-full overflow-x-hidden px-5 sm:px-5">
+        <div className="flex flex-col gap-1.5 fixed bottom-5 left-0 right-0 w-full max-w-full overflow-x-hidden px-5 sm:px-5">
           <div className="bg-[#1C1B1B] w-full flex-1 p-5 rounded-[8px] overflow-x-auto">
             <nav className="px-3.5 mb-3.5 flex items-center gap-1.5">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="12"
-                height="12"
+                width="8"
+                height="8"
                 viewBox="0 0 12 12"
                 fill="none"
               >
@@ -121,11 +145,11 @@ export default function Navigation() {
                   fill="#16DB65"
                 />
               </svg>
-              <h1 className="text-[14px] text-[#A8ADB2]">Navigation</h1>
+              <h1 className="text-[12px] text-[#A8ADB2]">Navigation</h1>
             </nav>
             {mobileLinks.map((item, idx) => (
               <Link key={idx} href={item.href}>
-                <p className="group flex items-center active:scale-[95%] duration-100 ease-in-out justify-between text-white text-[22px] rounded-[8px] hover:text-[#16DB65] py-2 px-3.5 hover:bg-[rgba(22,219,101,0.15)]">
+                <p className="group flex items-center active:scale-[95%] duration-100 ease-in-out justify-between text-white text-[18px] rounded-[8px] hover:text-[#16DB65] py-2 px-3.5 hover:bg-[rgba(22,219,101,0.15)]">
                   {item.link}
                   <svg
                     className="transition-colors duration-75 group-hover:text-[#16DB65]"
