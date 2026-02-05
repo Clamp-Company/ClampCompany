@@ -19,7 +19,7 @@ export default function Navigation() {
       <nav className="flex justify-between items-center">
         <div>
           <Link href="/" className="cursor-pointer">
-            <h1 className="text-white text-[1.75rem] tracking-[-0.1rem] FontMedium">
+            <h1 className="text-white text-[1.76rem] tracking-[-0.1rem] FontMedium">
               Clamp Company
             </h1>
           </Link>
